@@ -1,0 +1,23 @@
+﻿<Application
+    x:Class="CinemaBox_for_WinRT.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CinemaBox_for_WinRT">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="#2a2a2a"/>
+                    <SolidColorBrush x:Key="PivotHeaderForegroundUnselectedBrush" Color="#666666" />
+                    <SolidColorBrush x:Key="PivotHeaderForegroundSelectedBrush" Color="#000000" />
+                    <SolidColorBrush x:Key="Background" Color="White" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="#2a2a2a"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

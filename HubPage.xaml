@@ -1,0 +1,205 @@
+﻿<Page
+    x:Class="CinemaBox_for_WinRT.HubPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CinemaBox_for_WinRT"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:CinemaBox_for_WinRT.Data"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    d:DataContext="{Binding Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="StandardDoubleLineItemTemplate">
+            <Grid Margin="0,0,0,12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="DarkGray" Height="80" Width="56" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top">
+                    <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" Height="80" Width="56"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="12,-7,0,0" MinWidth="245">
+                    <TextBlock Text="{Binding Title}" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                               TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                    <TextBlock Text="{Binding Subtitle}" Style="{ThemeResource ListViewItemContentTextBlockStyle}"
+                               Foreground="Black" FontSize="16" Opacity="0.6"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="StandardOneLineItemTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="{StaticResource PhoneAccentBrush}" Height="56" Width="56" Grid.Column="0" 
+                        HorizontalAlignment="Left" Margin="0,0,0,10">
+                    <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}" 
+                           Height="56" Width="56"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="12,-10,0,10" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title}" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                               TextWrapping="WrapWholeWords" MaxLines="2" Foreground="White" FontSize="24"/>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <!-- Настройки экрана -->
+    <Grid x:Name="LayoutRoot">
+        <Hub x:Name="Hub" x:Uid="Hub" Background="{ThemeResource Background}">
+            <Hub.Header>
+                <StackPanel>
+                    <TextBlock Text="cinemabox" FontSize="60" Foreground="Black" FontWeight="ExtraLight" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Hub.Header>
+
+            <!-- Хаб СЕГОДНЯ -->
+            <HubSection x:Uid="HubSection3"
+                        DataContext="{Binding Groups[0]}" AllowDrop="True" Foreground="Black">
+                <DataTemplate>
+                    <ListView 
+                        Margin="0,-10,0,0"
+                        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                        ScrollViewer.VerticalScrollMode="Enabled"
+                        AutomationProperties.AutomationId="ItemListViewSection3"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding Items}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
+                        ItemClick="ItemView_ItemClick"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Хаб СКОРО -->
+            <HubSection x:Uid="HubSection5"
+                        DataContext="{Binding Groups[1]}" AllowDrop="True" Foreground="Black">
+                <DataTemplate>
+                    <ListView 
+                        Margin="0,-10,0,0"
+                        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                        ScrollViewer.VerticalScrollMode="Enabled"
+                        AutomationProperties.AutomationId="ItemListViewSection5"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding Items}"
+                        ItemTemplate="{StaticResource StandardDoubleLineItemTemplate}"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True" ItemClick="SoonItemClick">
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Хаб ДРУГОЕ -->
+            <HubSection x:Uid="HubSection1" AllowDrop="True" Foreground="Black">
+                <DataTemplate>
+                    <ListView
+                        Margin="0,-10,0,0"
+                        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                        ScrollViewer.VerticalScrollMode="Enabled"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+
+                        <Grid Margin="0,0,0,12" Tapped="Reverse_Click">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="#297777" Height="56" Width="56" Grid.Column="0" 
+                                    HorizontalAlignment="Left">
+                                <Image Source="/Assets/phone.png" Stretch="UniformToFill" Height="56" Width="56"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="12,-7,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Uid="Reserve" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,12" Tapped="OpenHallsPage">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="#297777" Height="56" Width="56" 
+                                    Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Assets/chair.png" Stretch="UniformToFill" Height="56" Width="56"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="12,-7,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Uid="Scheme" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,12" Tapped="Grid_Tapped">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="#297777" Height="56" Width="56" 
+                                    Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Assets/money2.png" Stretch="UniformToFill" Height="56" Width="56"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="12,-7,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Uid="Prices" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,12" Tapped="AboutCinema_Click_from_HubPage">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="#297777" Height="56" Width="56" 
+                                    Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Assets/info.png" Stretch="UniformToFill" Height="56" Width="56"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="12,-7,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Uid="AboutCinema" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                                <TextBlock x:Uid="OpensInBrowser" Style="{ThemeResource ListViewItemContentTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" Opacity="0.6" MaxLines="2" Foreground="Black" FontSize="16"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Margin="0,0,0,12" Tapped="About_HubPage">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Background="#297777" Height="56" Width="56" 
+                                    Grid.Column="0" HorizontalAlignment="Left">
+                                <Image Source="/Assets/info.png" Stretch="UniformToFill" Height="56" Width="56"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" Margin="12,-7,0,0" VerticalAlignment="Center">
+                                <TextBlock x:Uid="AboutApp" Style="{ThemeResource ListViewItemTextBlockStyle}" 
+                                           TextWrapping="WrapWholeWords" MaxLines="2" Foreground="Black" FontSize="22"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#297777" Foreground="White">
+            <AppBarButton x:Uid="OpenMainPageInWeb" x:Name="OpenMainPageInWeb" Icon="World" Click="OpenMainPageInWeb_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
