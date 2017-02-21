@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutApp.Text" xml:space="preserve">
+    <value>About app</value>
+  </data>
+  <data name="AboutCinema.Text" xml:space="preserve">
+    <value>About cinema</value>
+  </data>
+  <data name="AddToCal.Label" xml:space="preserve">
+    <value>add reminder</value>
+  </data>
+  <data name="CallButton_ItemPage_v2.Label" xml:space="preserve">
+    <value>book</value>
+  </data>
+  <data name="CinemaInfo.Text" xml:space="preserve">
+    <value>description</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Connection error</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>Downloading...</value>
+  </data>
+  <data name="Genre" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="Hall1.Text" xml:space="preserve">
+    <value>Hall 1</value>
+  </data>
+  <data name="Hall2.Text" xml:space="preserve">
+    <value>Hall 2</value>
+  </data>
+  <data name="Hall3.Text" xml:space="preserve">
+    <value>Hall 3</value>
+  </data>
+  <data name="Hall4.Text" xml:space="preserve">
+    <value>Hall 4</value>
+  </data>
+  <data name="Hall5.Text" xml:space="preserve">
+    <value>Hall 5</value>
+  </data>
+  <data name="Hall6.Text" xml:space="preserve">
+    <value>Hall 6</value>
+  </data>
+  <data name="HallsPageAboutApp.Label" xml:space="preserve">
+    <value>about app</value>
+  </data>
+  <data name="HallVIP.Text" xml:space="preserve">
+    <value>Hall 6 VIP</value>
+  </data>
+  <data name="Header.Text" xml:space="preserve">
+    <value>cinemabox</value>
+  </data>
+  <data name="HubSection1.Header" xml:space="preserve">
+    <value>EVERYTHING </value>
+  </data>
+  <data name="HubSection3.Header" xml:space="preserve">
+    <value>TODAY</value>
+  </data>
+  <data name="HubSection5.Header" xml:space="preserve">
+    <value>SOON</value>
+  </data>
+  <data name="ItemPageAboutApp.Label" xml:space="preserve">
+    <value>about app</value>
+  </data>
+  <data name="ItemPageHalls.Label" xml:space="preserve">
+    <value>scheme</value>
+  </data>
+  <data name="ItemPagePrices.Label" xml:space="preserve">
+    <value>prices</value>
+  </data>
+  <data name="NavigationFailedExceptionMessage" xml:space="preserve">
+    <value>Navigation failed.</value>
+  </data>
+  <data name="NoSessions" xml:space="preserve">
+    <value>There are no sessions</value>
+  </data>
+  <data name="OpenMainPageInWeb.Label" xml:space="preserve">
+    <value>open browser</value>
+  </data>
+  <data name="OpensInBrowser.Text" xml:space="preserve">
+    <value>Opens in the browser</value>
+  </data>
+  <data name="Prices.Text" xml:space="preserve">
+    <value>Prices</value>
+  </data>
+  <data name="PricesPage.Title" xml:space="preserve">
+    <value>PRICES</value>
+  </data>
+  <data name="RefreshItemPage_v2.Label" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="RefreshSoonItemPage.Label" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="RegexCountry" xml:space="preserve">
+    <value>(?&lt;=ountry:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="RegexDirector" xml:space="preserve">
+    <value>(?&lt;=irector:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="RegexDuration" xml:space="preserve">
+    <value>(?&lt;=uration:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="RegexGenre" xml:space="preserve">
+    <value>(?&lt;=enre:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="RegexRating" xml:space="preserve">
+    <value>(?&lt;=ge limit:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="RegexYear" xml:space="preserve">
+    <value>(?&lt;=ear:&lt;/strong&gt;)(.*)(?=&lt;br /&gt;)</value>
+  </data>
+  <data name="Reserve.Text" xml:space="preserve">
+    <value>Make a reservation</value>
+  </data>
+  <data name="Schedule.Text" xml:space="preserve">
+    <value>schedule</value>
+  </data>
+  <data name="Scheme.Text" xml:space="preserve">
+    <value>Scheme</value>
+  </data>
+  <data name="SchemePage.Title" xml:space="preserve">
+    <value>SCHEME</value>
+  </data>
+  <data name="SetLang" xml:space="preserve">
+    <value>?lang=en</value>
+  </data>
+  <data name="SoonPageAboutApp.Label" xml:space="preserve">
+    <value>about app</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>http://parkcinema.az/?lang=en</value>
+  </data>
+  <data name="URL1" xml:space="preserve">
+    <value>http://parkcinema.az/?lang=en</value>
+  </data>
+  <data name="ViewInfoInWeb.Label" xml:space="preserve">
+    <value>open browser</value>
+  </data>
+  <data name="ViewWebPage.Label" xml:space="preserve">
+    <value>open browser</value>
+  </data>
+  <data name="ViewWebPage_v2.Label" xml:space="preserve">
+    <value>open browser</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Adult.Text" xml:space="preserve">
+    <value>Adult</value>
+  </data>
+  <data name="Child.Text" xml:space="preserve">
+    <value>Child</value>
+  </data>
+  <data name="Family3.Text" xml:space="preserve">
+    <value>Family 3</value>
+  </data>
+  <data name="Family4.Text" xml:space="preserve">
+    <value>Family 4</value>
+  </data>
+  <data name="SuperDay.Text" xml:space="preserve">
+    <value>Super Saver Tuesday</value>
+  </data>
+  <data name="MPPricesInfo.Text" xml:space="preserve">
+    <value>* Child prices apply from 5 - 12 years old. Family tickets require at least 1 adult member and no more than 2 per group of 3 or 4 people. Saver prices apply Monday to Friday before 6pm except public holidays when Standard prices apply. Adult prices apply 13+ years old. Super Saver Tuesday prices apply to all films, all day every Tuesday.</value>
+  </data>
+  <data name="PBPricesInfo.Text" xml:space="preserve">
+    <value>* When buying a ticket in VIP hall in Park Cinema during period of 1 January 2012 all members of BizKlub program will get a reduction for 20% a ticket!</value>
+  </data>
+  <data name="Since" xml:space="preserve">
+    <value>since</value>
+  </data>
+</root>
